@@ -1,0 +1,28 @@
+<template name="newMessage">
+
+	<div class="modal">
+		<ion-header-bar class="bar-positive">
+			<div class="buttons">
+				<button class="button button-icon icon ion-close" ng-click="closeModal()"></button>
+			</div>
+			<h1 class="title">新的笔记</h1>
+		</ion-header-bar>
+		<ion-content>
+			<form ng-submit="createMessage(message)">
+				<div class="list">
+					<label class="item item-input">
+						<input type="text" ng-model="message.title" placeholder="标题">
+					</label>
+					<label class="item item-input">
+						<textarea ng-model="message.content" placeholder="内容"></textarea>
+					</label>
+					<ion-checkbox ng-model="message.sticky">置顶</ion-checkbox>
+				</div>
+				<div class="padding">
+					<button class="button button-block button-positive">创建</button>
+				</div>
+			</form>
+		</ion-content>
+	</div>
+
+</template>

@@ -1,0 +1,38 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "ngMeteor": {},
+      "angular-ui-router": {},
+      "ionic": {},
+      "collection-hooks": {}
+    },
+    "packages": {
+      "ngMeteor": {
+        "git": "https://github.com/loneleeandroo/ngMeteor.git",
+        "tag": "v0.1.22",
+        "commit": "170d9309fe16d7d38bffc1a6ce42a379be27cdaa"
+      },
+      "angular-ui-router": {
+        "git": "https://github.com/ccll/meteor-angular-ui-router.git",
+        "tag": "v0.3.2",
+        "commit": "2bafcc0f51da5b7e60561f57356d52e08a6fad87"
+      },
+      "ionic": {
+        "git": "https://github.com/cramrov/meteor-ionic.git",
+        "tag": "v0.10.0",
+        "commit": "1b73928b8465d0886e60076a7ac79b1140de99bc"
+      },
+      "collection-hooks": {
+        "git": "https://github.com/matb33/meteor-collection-hooks.git",
+        "tag": "v0.6.3",
+        "commit": "70f2598bf991cb36effd72aea2555cba96f88355"
+      },
+      "bower": {
+        "git": "https://github.com/mquandalle/meteor-bower.git",
+        "tag": "v0.1.2",
+        "commit": "780b841593c355d1522982e50e7a59fe35d33fee"
+      }
+    }
+  }
+}

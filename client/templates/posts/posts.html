@@ -1,0 +1,41 @@
+<template name="posts">
+
+	<ion-view title="同事圈" hide-back-button="true">
+		<ion-content>
+			<ion-nav-buttons side="left">
+				<button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+			</ion-nav-buttons>
+
+			<ion-nav-buttons side="right">
+				<button class="button button-icon icon ion-compose" ng-click="openPostModal()"></button>
+			</ion-nav-buttons>
+
+			<div class="list card">
+				<div class="item item-avatar">
+					<img src="/crapthings.jpeg" alt="">
+					<h2>张翃</h2>
+					<p>2小时前</p>
+				</div>
+
+				<div class="item item-body">
+					<img src="/8g.jpg" alt="" class="full-image">
+					<p>文章28日晚被爆出婚外情，与曾在同部戏中有过合作的女演员姚笛相恋。今日有媒体称日前文章曾与姚笛两人秘密赴深圳约会，共度六天五夜，还一同前往香港游玩，举止相当亲密。</p>
+					<p>
+						<a href="#" class="subdued">1 赞</a>
+						<a href="#" class="subdued">5 评论</a>
+					</p>
+				</div>
+
+				<div class="item tabs tabs-secondary tabs-icon-left">
+					<a href="" class="tab-item">
+						<i class="icon ion-thumbsup"></i> 赞
+					</a>
+					 <a class="tab-item" href="#">
+						<i class="icon ion-chatbox"></i> 评论
+					</a>
+				</div>
+			</div>
+		</ion-content>
+	</ion-view>
+
+</template>

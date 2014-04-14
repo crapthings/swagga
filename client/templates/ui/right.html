@@ -1,0 +1,36 @@
+<template name="rightSide">
+
+	<ion-side-menu side="right">
+
+		<ion-header-bar class="bar-positive" align-title="left">
+			<h1 class="title">[[currentUser.profile.displayName]]</h1>
+		</ion-header-bar>
+
+		<ion-content>
+			<div class="list">
+				<div class="item item-divider">我的</div>
+				<a class="item item-icon-left" nav-clear menu-close ui-sref="menu.notes.latest">
+					<i class="icon ion-compose"></i> 笔记
+					<span class="badge badge-assertive">[[currentUser.stats.notes]]</span>
+				</a>
+				<a class="item item-icon-left" nav-clear menu-close ui-sref="menu.todos.uncompleted">
+					<i class="icon ion-clipboard"></i> 任务
+					<span class="badge badge-assertive">[[currentUser.stats.todos.uncompleted]] 项待办中</span>
+				</a>
+				<a class="item item-icon-left" nav-clear menu-close ui-sref="menu.profile">
+					<i class="icon ion-person"></i> 档案
+					<span class="item-note">[[currentUser.profile.displayName]] @[[currentUser.username]]</span>
+				</a>
+				<div class="item item-divider">系统</div>
+				<a class="item item-icon-left">
+					<i class="icon ion-gear-b"></i> <del>设置</del>
+				</a>
+				<a class="item item-icon-left" ng-click="signout()">
+					<i class="icon ion-log-out"></i> 退出
+				</a>
+			</div>
+		</ion-content>
+
+	</ion-side-menu>
+
+</template>

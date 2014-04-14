@@ -1,0 +1,58 @@
+<template name="intro">
+
+	<ion-slide-box>
+
+		<ion-slide>
+			<div class="box blue">
+				<h1>What is Meteor?</h1>
+				<p>Meteor is an ultra-simple environment for building modern websites. What once took weeks, even with the best tools, now takes hours with Meteor.</p>
+				<p>The web was originally designed to work in the same way that mainframes worked in the 70s. The application server rendered a screen and sent it over the network to a dumb terminal. Whenever the user did anything, that server rerendered a whole new screen. This model served the Web well for over a decade. It gave rise to LAMP, Rails, Django, PHP.</p>
+				<p>But the best teams, with the biggest budgets and the longest schedules, now build applications in JavaScript that run on the client. These apps have stellar interfaces. They don't reload pages. They are reactive: changes from any client immediately appear on everyone's screen.</p>
+				<p>They've built them the hard way. Meteor makes it an order of magnitude simpler, and a lot more fun. You can build a complete application in a weekend, or a sufficiently caffeinated hackathon. No longer do you need to provision server resources, or deploy API endpoints in the cloud, or manage a database, or wrangle an ORM layer, or swap back and forth between JavaScript and Ruby, or broadcast data invalidations to clients.</p>
+				<p>Meteor is a work in progress, but we hope it shows the direction of our thinking. We'd love to hear your feedback.</p>
+			</div>
+		</ion-slide>
+
+		<ion-slide>
+			<div class="box yellow">
+				<h1>Seven Principles of Meteor</h1>
+				<ul>
+					<li>
+						<p>Data on the Wire. Don't send HTML over the network. Send data and let the client decide how to render it.</p>
+					</li>
+					<li>
+						<p>One Language. Write both the client and the server parts of your interface in JavaScript.</p>
+					</li>
+					<li>
+						<p>Database Everywhere. Use the same transparent API to access your database from the client or the server.</p>
+					</li>
+					<li>
+						<p>Latency Compensation. On the client, use prefetching and model simulation to make it look like you have a zero-latency connection to the database.</p>
+					</li>
+					<li>
+						<p>Full Stack Reactivity. Make realtime the default. All layers, from database to template, should make an event-driven interface available.</p>
+					</li>
+					<li>
+						<p>Embrace the Ecosystem. Meteor is open source and integrates, rather than replaces, existing open source tools and frameworks.</p>
+					</li>
+					<li>
+						<p>Simplicity Equals Productivity. The best way to make something seem simple is to have it actually be simple. Accomplish this through clean, classically beautiful APIs.</p>
+					</li>
+				</ul>
+			</div>
+		</ion-slide>
+
+		<ion-slide>
+			<div class="list">
+				<label class="item item-input">
+					<input type="text" placeholder="username">
+				</label>
+				<label class="item item-input">
+					<input type="password" placeholder="password">
+				</label>
+			</div>
+		</ion-slide>
+
+	</ion-slide-box>
+
+</template>

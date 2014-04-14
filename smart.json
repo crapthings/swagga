@@ -1,0 +1,8 @@
+{
+  "packages": {
+    "ngMeteor": {},
+    "angular-ui-router": {},
+    "ionic": {},
+    "collection-hooks": {}
+  }
+}

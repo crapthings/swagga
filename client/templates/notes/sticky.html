@@ -1,0 +1,22 @@
+<template name="stickyNotes">
+
+	<ion-view title="我的笔记 - 置顶" hide-back-button="true">
+		<ion-content>
+
+			<ion-nav-buttons side="left">
+				<button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+			</ion-nav-buttons>
+
+			<ion-nav-buttons side="right">
+				<button class="button button-icon icon ion-compose" ng-click="openNoteModal()"></button>
+			</ion-nav-buttons>
+
+			<div class="list">
+				<a class="item" ng-repeat="note in Notes | filter: { sticky: true }" ui-sref="menu.notes.view({ _id: note._id })">[[note.title]]</a>
+			</div>
+
+		</ion-content>
+		{{> notesTabs}}
+	</ion-view>
+
+</template>

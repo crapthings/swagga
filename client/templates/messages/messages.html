@@ -1,0 +1,34 @@
+<template name="messages">
+
+	<ion-view title="私信" hide-back-button="true">
+
+		<ion-content>
+
+			<ion-nav-buttons side="left">
+				<button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+			</ion-nav-buttons>
+
+			<ion-nav-buttons side="right">
+				<button class="button button-icon icon ion-compose" ng-click="openMessageModal()"></button>
+			</ion-nav-buttons>
+
+			<div class="list">
+				<a class="item item-divider">置顶</a>
+				<a class="item" ng-repeat="message in Messages | filter: { sticky: true} | limitTo: 3">
+					<h2>[[message.title]]</h2>
+				</a>
+				<div class="item item-divider">最近</div>
+				<div class="card" ng-repeat="message in Messages | filter: { sticky: false }">
+					<div class="item item-divider">
+						<h2>[[message.title]]</h2>
+					</div>
+					<span class="item item-text-wrap">
+						<p>[[message.content]]</p>
+					</span>
+				</div>
+			</div>
+
+		</ion-content>
+	</ion-view>
+
+</template>

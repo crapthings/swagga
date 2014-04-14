@@ -1,0 +1,37 @@
+<template name="uncompletedTodos">
+
+	<ion-view title="我的任务" hide-back-button="true">
+		<ion-content>
+
+			<ion-nav-buttons side="left">
+				<button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+			</ion-nav-buttons>
+
+			<ion-nav-buttons side="right">
+				<button class="button button-icon icon ion-plus" ng-click="openTodoModal()"></button>
+			</ion-nav-buttons>
+
+			<div class="list">
+				<a href="" class="item item-divider">紧急</a>
+				<a class="item" ng-repeat="todo in Todos | filter: { urgency: true } | limitTo: 3">[[todo.content]]</a>
+				<a href="" class="item item-divider">待办</a>
+				<a class="item" ng-repeat="todo in Todos | filter: { completed: false }">[[todo.content]]</a>
+			</div>
+
+
+
+		</ion-content>
+		<div class="tabs">
+				<a class="tab-item">
+				Home
+				</a>
+				<a class="tab-item">
+				Favorites
+				</a>
+				<a class="tab-item">
+				Settings
+				</a>
+			</div>
+	</ion-view>
+
+</template>

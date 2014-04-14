@@ -1,0 +1,22 @@
+<template name="viewNote">
+
+	<ion-view title="我的笔记 - 查看">
+		<ion-content>
+
+			<ion-nav-buttons side="left">
+				<button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+			</ion-nav-buttons>
+
+			<ion-nav-buttons side="right">
+				<button class="button button-icon icon ion-compose" ng-click="openNoteModal()"></button>
+			</ion-nav-buttons>
+
+			<div class="card">
+				<div class="item item-divider">[[note.title]]</div>
+				<div class="item item-text-wrap">[[note.content]]</div>
+			</div>
+
+		</ion-content>
+	</ion-view>
+
+</template>

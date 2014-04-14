@@ -1,0 +1,26 @@
+<template name="signin">
+
+	<ion-view>
+		<ion-header-bar class="bar-positive">
+			<h1 class="title">登录</h1>
+		</ion-header-bar>
+		<ion-content>
+			<div class="item item-divider" ng-show="notice">[[notice]]</div>
+			<form ng-submit="signin(user)">
+				<div class="list">
+					<label class="item item-input">
+						<input type="text" placeholder="用户名" ng-model="user.username">
+					</label>
+					<label class="item item-input">
+						<input type="password" placeholder="密码" ng-model="user.password">
+					</label>
+				</div>
+				<div class="padding">
+					<button class="button button-block button-positive">登录</button>
+					<a class="button button-block button-stable" ui-sref="signup">注册</a>
+				</div>
+			</form>
+		</ion-content>
+	</ion-view>
+
+</template>
