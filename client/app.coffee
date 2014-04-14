@@ -9,7 +9,7 @@ ngMeteor.config ['$stateProvider', '$urlRouterProvider', '$locationProvider', ($
 		.state 'intro',
 			url: '/intro'
 			template: getTemplate 'intro'
-			# controller: 'signinCtrl'
+			# controller: 'introCtrl'
 			auth: false
 
 		.state 'signin',
