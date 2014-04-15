@@ -2,28 +2,27 @@
 
 	<ion-view>
 		<ion-header-bar class="bar-positive">
-			<h1 class="title">注册</h1>
+			<h1 class="title">Sign Up</h1>
 		</ion-header-bar>
 		<ion-content>
-			<div class="item item-divider" ng-show="notice">[[notice]]</div>
 			<form ng-submit="signup(user)">
 				<div class="list">
 					<label class="item item-input">
-						<input type="text" ng-model="user.username" placeholder="用户名">
+						<input type="text" placeholder="username" ng-model="user.username">
 					</label>
 					<label class="item item-input">
-						<input type="password" ng-model="user.password" placeholder="密码">
+						<input type="password" placeholder="password" ng-model="user.password">
 					</label>
 					<label class="item item-input">
-						<input type="text" ng-model="user.profile.displayName" placeholder="姓名">
+						<input type="text" placeholder="nickname" ng-model="user.profile.nickname">
 					</label>
 					<label class="item item-input">
-						<input type="text" ng-model="user.profile.mobile" placeholder="手机号码">
+						<input type="text" ng-model="user.profile.mobile" placeholder="mobile">
 					</label>
 				</div>
 				<div class="padding">
-					<button class="button button-block button-positive">注册</button>
-					<a ui-sref="signin" class="button button-block button-stable">返回</a>
+					<button type="submit" class="button button-block button-positive">Sign Up</button>
+					<a class="button button-block button-stable" ui-sref="signin">Back</a>
 				</div>
 			</form>
 		</ion-content>

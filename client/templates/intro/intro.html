@@ -15,18 +15,24 @@
 		</ion-slide>
 
 		<ion-slide>
+			<div class="box yellow">
+				<h1>this is intro page 3</h1>
+			</div>
+		</ion-slide>
+
+		<ion-slide>
 			<form ng-submit="signin(user)">
 				<div class="list">
 					<label class="item item-input">
-						<input type="text" placeholder="用户名" ng-model="user.username">
+						<input type="text" placeholder="username" ng-model="user.username">
 					</label>
 					<label class="item item-input">
-						<input type="password" placeholder="密码" ng-model="user.password">
+						<input type="password" placeholder="password" ng-model="user.password">
 					</label>
 				</div>
 				<div class="padding">
-					<button class="button button-block button-positive">登录</button>
-					<a class="button button-block button-stable" ui-sref="signup">注册</a>
+					<button type="submit" class="button button-block button-positive">Sign In</button>
+					<a class="button button-block button-stable" ui-sref="signup">Sign Up</a>
 				</div>
 			</form>
 		</ion-slide>

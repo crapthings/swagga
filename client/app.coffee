@@ -2,14 +2,14 @@ ngMeteor.config ['$stateProvider', '$urlRouterProvider', '$locationProvider', ($
 
 	$locationProvider.html5Mode true
 
-	$urlRouterProvider.otherwise '/menu/notes/latest'
+	$urlRouterProvider.otherwise '/menu/tabs/circle'
 
 	$stateProvider
 
 		.state 'intro',
 			url: '/intro'
 			template: getTemplate 'intro'
-			# controller: 'introCtrl'
+			controller: 'introCtrl'
 			auth: false
 
 		.state 'signin',
@@ -29,90 +29,41 @@ ngMeteor.config ['$stateProvider', '$urlRouterProvider', '$locationProvider', ($
 			abstract: true
 			template: getTemplate 'menu'
 			controller: 'menuCtrl'
-			auth: true
+			auth: undefined
 
-		# posts
-
-		.state 'menu.posts',
-			url: '/posts'
+		.state 'menu.tabs',
+			url: '/tabs'
 			abstract: true
-			template: getTemplate 'postsTabs'
-			controller: 'postsCtrl'
-			auth: true
+			template: getTemplate 'tabs'
+			controller: 'tabsCtrl'
+			auth: undefined
 
-		.state 'menu.posts.all',
-			url: '/all'
+		.state 'menu.tabs.circle',
+			url: '/circle'
 			views:
-				'all':
-					template: getTemplate 'posts'
+				'circle':
+					template: getTemplate 'circle'
 			auth: true
 
-		.state 'menu.messages',
-			url: '/messages'
-			template: getTemplate 'messages'
-			controller: 'messagesCtrl'
-			auth: true
-
-		# notes
-
-		.state 'menu.notes',
-			url: '/notes'
-			abstract: true
-			template: '<ion-nav-view></ion-nav-view><ion-nav-view name="tabs"></ion-nav-view>'
-			# views:
-			# 	'tabs':
-			# 		template: getTemplate 'notesTabs'
-			controller: 'notesCtrl'
-			auth: true
-
-		.state 'menu.notes.latest',
-			url: '/latest'
+		.state 'menu.tabs.explore',
+			url: '/explore'
 			views:
-				'':
-					template: getTemplate 'latestNotes'
-				'tabs':
-					template: getTemplate 'notesTabs'
+				'explore':
+					template: getTemplate 'explore'
 			auth: true
 
-		.state 'menu.notes.important',
-			url: '/important'
+		.state 'menu.tabs.heart',
+			url: '/heart'
 			views:
-				'':
-					template: getTemplate 'importantNotes'
+				'heart':
+					template: getTemplate 'heart'
 			auth: true
 
-		.state 'menu.notes.sticky',
-			url: '/sticky'
+		.state 'menu.tabs.my',
+			url: '/my'
 			views:
-				'':
-					template: getTemplate 'stickyNotes'
-			auth: true
-
-		.state 'menu.notes.view',
-			url: '/view/:_id'
-			template: getTemplate 'viewNote'
-			controller: 'viewNoteCtrl'
-			auth: true
-
-		# todos
-
-		.state 'menu.todos',
-			url: '/todos'
-			abstract: true
-			controller: 'todosCtrl'
-			template: '<ion-nav-view></ion-nav-view>'
-			auth: true
-
-		.state 'menu.todos.uncompleted',
-			url: '/todos/uncompleted'
-			template: getTemplate 'uncompletedTodos'
-			controller: 'todosCtrl'
-			auth: true
-
-		.state 'menu.profile',
-			url: '/profile'
-			template: getTemplate 'profile'
-			controller: 'profileCtrl'
+				'my':
+					template: getTemplate 'my'
 			auth: true
 
 ]
@@ -120,7 +71,7 @@ ngMeteor.config ['$stateProvider', '$urlRouterProvider', '$locationProvider', ($
 ngMeteor.run ['$rootScope', '$state', ($rootScope, $state) ->
 
 	if Meteor.userId()
-		$state.go 'menu.notes.latest'
+		$state.go 'menu.tabs.circle'
 
 	$rootScope.$on '$stateChangeStart', (event, toState, toParams, fromState, fromParams) ->
 		unless toState.name is 'intro' or toState.name is 'signin' or toState.name is 'signup'

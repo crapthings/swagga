@@ -1,4 +1,4 @@
-ngMeteor.controller 'signinCtrl', ['$scope', '$state', ($scope, $state) ->
+ngMeteor.controller 'introCtrl', ['$scope', '$state', ($scope, $state) ->
 
 	$scope.signin = (user) ->
 		Meteor.loginWithPassword user.username, user.password, (err) ->
