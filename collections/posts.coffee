@@ -8,5 +8,5 @@ Posts.allow
 Posts.before.insert (userId, post) ->
 	_.extend post,
 		creatorId: userId
-		createdAt: Date.now()
+		createdAt: new Date()
 		private: post.private or false

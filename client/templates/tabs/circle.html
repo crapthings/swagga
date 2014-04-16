@@ -4,9 +4,11 @@
 
 		<ion-content>
 			<div class="list card" ng-repeat="post in Posts">
+				<a class="pic" style="background-image: url('/card.jpg');"></a>
 				<div class="item item-avatar">
+					<img src="/crapthings.jpeg">
 					<h2>[[post.title]]</h2>
-					<p>November 05, 1955</p>
+					<p>[[post.createdAt]]</p>
 				</div>
 
 				<div class="item item-body">
