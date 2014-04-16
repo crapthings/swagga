@@ -43,6 +43,7 @@ ngMeteor.config ['$stateProvider', '$urlRouterProvider', '$locationProvider', ($
 			views:
 				'circle':
 					template: getTemplate 'circle'
+					controller: 'circleCtrl'
 			auth: true
 
 		.state 'menu.tabs.explore',
