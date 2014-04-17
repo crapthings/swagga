@@ -10,3 +10,9 @@ Posts.before.insert (userId, post) ->
 		creatorId: userId
 		createdAt: new Date()
 		private: post.private or false
+		price: (post.price).toNumber().round(2)
+
+Posts.after.insert (userId, post) ->
+	Users.update userId,
+		$inc:
+			'stats.spent': post.price
