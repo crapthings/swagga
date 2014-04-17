@@ -9,7 +9,10 @@
 				</a>
 				<a>[[currentUser.profile.displayName]] <small>@[[currentUser.username]]</small></a>
 				<p>
-					Total Spent [[currentUser.stats.spent.round(2)]] USD
+					Total Spent [[currentUser.stats.spent.round(2).format(2)]] USD
+				</p>
+				<p>
+					Days Average [[currentUser.stats.spent / days]] USD
 				</p>
 			</div>
 			<div class="list">
